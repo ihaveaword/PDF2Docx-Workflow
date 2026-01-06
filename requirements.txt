@@ -1,0 +1,6 @@
+pandas
+openpyxl
+pdf2image
+python-docx
+DrissionPage
+pdfplumber

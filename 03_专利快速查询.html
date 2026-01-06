@@ -1,0 +1,653 @@
+
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>专利快速查询助手</title>
+        <style>
+            body { 
+                font-family: '微软雅黑', sans-serif; 
+                padding: 20px; 
+                background: #f5f5f5;
+            }
+            h2 { color: #333; }
+            .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; }
+            .item { 
+                margin-bottom: 15px; 
+                padding: 15px; 
+                border: 1px solid #ddd; 
+                border-radius: 5px; 
+                background: #fafafa;
+                transition: background 0.2s;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .item:hover { background: #f0f0f0; }
+            .seq { 
+                display: inline-block;
+                width: 40px;
+                font-weight: bold; 
+                color: #007bff; 
+                font-size: 16px;
+            }
+            .patent-no { 
+                display: inline-block;
+                background: #007bff;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 3px;
+                margin: 0 10px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .copy-btn { 
+                background: #28a745; 
+                color: white;
+                border: none;
+                padding: 6px 12px; 
+                border-radius: 4px; 
+                font-size: 14px;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                transition: background 0.2s;
+            }
+            .copy-btn:hover { background: #218838; }
+            .copy-btn.copied { background: #6c757d; }
+            .title { 
+                color: #666; 
+                font-size: 14px; 
+                margin-top: 8px;
+                width: 100%;
+            }
+            .link-btn {
+                background: #17a2b8;
+                color: white;
+                text-decoration: none;
+                padding: 6px 12px;
+                border-radius: 4px;
+                font-size: 14px;
+                margin-left: 10px;
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+            }
+            .link-btn:hover { background: #138496; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>📋 专利快速查询助手</h2>
+            <p>共 <strong>68</strong> 个专利，点击"📋 复制"按钮复制专利号，然后手动访问 <a href="https://www.uyanip.com/search/keyword" target="_blank">Uyanip</a> 查询。</p>
+            <hr>
+    
+        <div class="item">
+            <span class="seq">1</span>
+            <span class="patent-no">ZL202030452154.0</span>
+            <button class="copy-btn" onclick="copyPatentNo('202030452154.0', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-外观设计专利1-压力调节器-ZL202030452154.0</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">1</span>
+            <span class="patent-no">ZL201720332910.9</span>
+            <button class="copy-btn" onclick="copyPatentNo('201720332910.9', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利1-一种核电站用差压及压力变送器可靠性检测装置-ZL201720332910.9</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">1</span>
+            <span class="patent-no">ZL201310699915.1</span>
+            <button class="copy-btn" onclick="copyPatentNo('201310699915.1', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利1-基于核电厂真实工况与仿真系统的故障诊断方法及系统-ZL201310699915.1</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">2</span>
+            <span class="patent-no">ZL201820101797.8</span>
+            <button class="copy-btn" onclick="copyPatentNo('201820101797.8', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利2-定位装置-ZL201820101797.8</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">2</span>
+            <span class="patent-no">ZL202030451591.0</span>
+            <button class="copy-btn" onclick="copyPatentNo('202030451591.0', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-外观设计专利2-诊断机-ZL202030451591.0</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">2</span>
+            <span class="patent-no">ZL201810922356.9</span>
+            <button class="copy-btn" onclick="copyPatentNo('201810922356.9', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利2-核电站蒸发器汽水流量测量通道比较方法及系统-ZL201810922356.9</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">3</span>
+            <span class="patent-no">ZL201820691399.6</span>
+            <button class="copy-btn" onclick="copyPatentNo('201820691399.6', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利3-变送器转换板烤机装置和变送器转换板烤机装置-ZL201820691399.6</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">3</span>
+            <span class="patent-no">ZL202130364510.8</span>
+            <button class="copy-btn" onclick="copyPatentNo('202130364510.8', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-外观设计专利3-镜头-ZL202130364510.8</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">3</span>
+            <span class="patent-no">ZL201810045730.1</span>
+            <button class="copy-btn" onclick="copyPatentNo('201810045730.1', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利3-液位变送器校验装置及其校验方法-ZL201810045730.1</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">4</span>
+            <span class="patent-no">ZL201710284125.5</span>
+            <button class="copy-btn" onclick="copyPatentNo('201710284125.5', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利4-一种核电厂I&C设备老化生命周期的管理方法及系统-ZL201710284125.5</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">4</span>
+            <span class="patent-no">ZL202130146601.4</span>
+            <button class="copy-btn" onclick="copyPatentNo('202130146601.4', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-外观设计专利4-智能校验仪-ZL202130146601.4</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">4</span>
+            <span class="patent-no">ZL201821870549.6</span>
+            <button class="copy-btn" onclick="copyPatentNo('201821870549.6', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利4-一种高低值选择电路和用电设备-ZL201821870549.6</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">5</span>
+            <span class="patent-no">ZL201810924323.8</span>
+            <button class="copy-btn" onclick="copyPatentNo('201810924323.8', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利5-核电站蒸发器主给水流量冗余测量通道比较方法及系统-ZL201810924323.8</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">5</span>
+            <span class="patent-no">ZL201920082340.1</span>
+            <button class="copy-btn" onclick="copyPatentNo('201920082340.1', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利5-一种定值给定电路及装置-ZL201920082340.1</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">5</span>
+            <span class="patent-no">ZL202130146686.6</span>
+            <button class="copy-btn" onclick="copyPatentNo('202130146686.6', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-外观设计专利5-测量仪（手持）-ZL202130146686.6</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">6</span>
+            <span class="patent-no"></span>
+            <button class="copy-btn" onclick="copyPatentNo('', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利6-核级变送器转接装置及其转接电路和校验装置-ZL 202122759115.7</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">6</span>
+            <span class="patent-no">ZL201810922332.3</span>
+            <button class="copy-btn" onclick="copyPatentNo('201810922332.3', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利6-核电站蒸发器蒸汽流量冗余测量通道比较方法及系统-ZL201810922332.3</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">7</span>
+            <span class="patent-no">ZL201811582267.0</span>
+            <button class="copy-btn" onclick="copyPatentNo('201811582267.0', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利7-一种显示及控制电路及其装置-ZL201811582267.0</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">7</span>
+            <span class="patent-no">ZL202021549522.4</span>
+            <button class="copy-btn" onclick="copyPatentNo('202021549522.4', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利7-校验装置-ZL202021549522.4</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">8</span>
+            <span class="patent-no">ZL201910358807.5</span>
+            <button class="copy-btn" onclick="copyPatentNo('201910358807.5', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利8-可靠性监测系统和具有可靠性监测功能的转速机架-ZL201910358807.5</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">8</span>
+            <span class="patent-no">ZL2021210334216</span>
+            <button class="copy-btn" onclick="copyPatentNo('2021210334216', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利8-核电厂用泵腔视觉检测工具-ZL2021210334216</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">9</span>
+            <span class="patent-no">ZL201810143130.9</span>
+            <button class="copy-btn" onclick="copyPatentNo('201810143130.9', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利9-设备管理方法、装置、系统、计算机设备和存储介质-ZL201810143130.9</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">9</span>
+            <span class="patent-no">ZL202123003971.6</span>
+            <button class="copy-btn" onclick="copyPatentNo('202123003971.6', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利9-真空容器-ZL202123003971.6-2022.05.24</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">10</span>
+            <span class="patent-no">ZL201910358706.8</span>
+            <button class="copy-btn" onclick="copyPatentNo('201910358706.8', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利10-故障诊断系统、具有故障诊断功能的转速机架及监测系统-ZL201910358706.8</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">10</span>
+            <span class="patent-no">ZL202220650749.0</span>
+            <button class="copy-btn" onclick="copyPatentNo('202220650749.0', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利10-隔离器膜片位置测量装置ZL202220650749.0</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">11</span>
+            <span class="patent-no">ZL202220651097.2</span>
+            <button class="copy-btn" onclick="copyPatentNo('202220651097.2', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利11-隔离器预充液装置ZL202220651097.2</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">11</span>
+            <span class="patent-no">ZL201810301156.1</span>
+            <button class="copy-btn" onclick="copyPatentNo('201810301156.1', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利11-校验装置及其校验方法-ZL201810301156.1</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">12</span>
+            <span class="patent-no">ZL202222496020.5</span>
+            <button class="copy-btn" onclick="copyPatentNo('202222496020.5', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利12-主泵转速传感器探针模拟转动装置-ZL202222496020.5</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">12</span>
+            <span class="patent-no">ZL201910358696.8</span>
+            <button class="copy-btn" onclick="copyPatentNo('201910358696.8', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利12-可靠性监测系统、具有可靠性监测功能的转速机架及系统-ZL201910358696.8</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">13</span>
+            <span class="patent-no">ZL201810650765.8</span>
+            <button class="copy-btn" onclick="copyPatentNo('201810650765.8', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利13-铠装热电偶温度探头修复方法-ZL201810650765.8</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">13</span>
+            <span class="patent-no"></span>
+            <button class="copy-btn" onclick="copyPatentNo('', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利13-用于核电主泵位移仪表绝缘连续性测量的接口装置-ZL 202121635928.9</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">14</span>
+            <span class="patent-no">ZL201810302118.8</span>
+            <button class="copy-btn" onclick="copyPatentNo('201810302118.8', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利14-变送器抽真空充液系统及方法-ZL201810302118.8</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">14</span>
+            <span class="patent-no">ZL2024210604100</span>
+            <button class="copy-btn" onclick="copyPatentNo('2024210604100', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利14-便携式水泵及核电站给水箱测试装置-ZL2024210604100</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">15</span>
+            <span class="patent-no">ZL201410231523.7</span>
+            <button class="copy-btn" onclick="copyPatentNo('201410231523.7', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利15-核电站分布式控制系统中网关通讯异常自诊断方法及系统（不可增加通讯点）-ZL201410231523.7</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">15</span>
+            <span class="patent-no">ZL2024209143404</span>
+            <button class="copy-btn" onclick="copyPatentNo('2024209143404', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-实用新型专利15-一种浮球液位传感器的验证装置-ZL2024209143404</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">16</span>
+            <span class="patent-no">ZL201410232785.5</span>
+            <button class="copy-btn" onclick="copyPatentNo('201410232785.5', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利16-核电站分布式控制系统中网关通讯异常自诊断方法及系统（可增加通讯点）-ZL201410232785.5</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">17</span>
+            <span class="patent-no">ZL201410232843.4</span>
+            <button class="copy-btn" onclick="copyPatentNo('201410232843.4', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利17-核电站分布式控制系统中网关通讯异常自诊断方法及系统（实时速率）-ZL201410232843.4-</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">18</span>
+            <span class="patent-no">ZL201510628046.2</span>
+            <button class="copy-btn" onclick="copyPatentNo('201510628046.2', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利18-核电厂堆芯水位测量方法-ZL201510628046.2</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">19</span>
+            <span class="patent-no">ZL201711278081.1</span>
+            <button class="copy-btn" onclick="copyPatentNo('201711278081.1', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利19-核电站保护机柜的抗干扰能力检测方法及系统-ZL201711278081.1</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">20</span>
+            <span class="patent-no">ZL201811343784.2</span>
+            <button class="copy-btn" onclick="copyPatentNo('201811343784.2', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利20-一种固态编程电路-ZL201811343784.2</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">21</span>
+            <span class="patent-no">ZL201910708027.9</span>
+            <button class="copy-btn" onclick="copyPatentNo('201910708027.9', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利21-应用于核电站盘台系统的显示及控制装置-发明专利-ZL201910708027.9</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">22</span>
+            <span class="patent-no">ZL201910707266.2</span>
+            <button class="copy-btn" onclick="copyPatentNo('201910707266.2', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利22-应用于核电站盘台系统的显示及控制装置-发明专利-ZL201910707266.2</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">23</span>
+            <span class="patent-no">ZL201810074983.1</span>
+            <button class="copy-btn" onclick="copyPatentNo('201810074983.1', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利23-核电厂仪控维修数据的处理方法、装置和计算机设备ZL201810074983.1</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">24</span>
+            <span class="patent-no">ZL202010687553.4</span>
+            <button class="copy-btn" onclick="copyPatentNo('202010687553.4', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利24- 传感器交叉验证故障诊断方法、装置、计算机设备和存储介质ZL202010687553.4</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">25</span>
+            <span class="patent-no">ZL202011505744.0</span>
+            <button class="copy-btn" onclick="copyPatentNo('202011505744.0', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利25-线结构光视觉测量标定方法及系统ZL202011505744.0</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">26</span>
+            <span class="patent-no">ZL202011554952.X</span>
+            <button class="copy-btn" onclick="copyPatentNo('202011554952.X', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利26-U型槽多维度间隙测量方法及系统ZL202011554952.X</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">27</span>
+            <span class="patent-no">ZL202010667472.8</span>
+            <button class="copy-btn" onclick="copyPatentNo('202010667472.8', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利27-确定控制系统过程量缺省值的方法及计算机设备ZL202010667472.8</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">28</span>
+            <span class="patent-no">ZL202010688219.0</span>
+            <button class="copy-btn" onclick="copyPatentNo('202010688219.0', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利28-文丘里管故障修正方法、装置、计算机设备和存储介质ZL202010688219.0</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">29</span>
+            <span class="patent-no">ZL202010667830.5</span>
+            <button class="copy-btn" onclick="copyPatentNo('202010667830.5', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利29-主给水流量的异常检测方法、装置和计算机设备ZL202010667830.5</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">30</span>
+            <span class="patent-no">ZL202110523368.6</span>
+            <button class="copy-btn" onclick="copyPatentNo('202110523368.6', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利30-一种变送器阻尼时间测试装置及测试方法-ZL202110523368.6</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">31</span>
+            <span class="patent-no">ZL202010687759.7</span>
+            <button class="copy-btn" onclick="copyPatentNo('202010687759.7', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利31-蒸发器液位检测方法、装置、计算机设备和存储介质-ZL202010687759.7</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">32</span>
+            <span class="patent-no">ZL202010667827.3</span>
+            <button class="copy-btn" onclick="copyPatentNo('202010667827.3', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利32-主蒸汽流量的校准方法、装置、计算机设备和存储介质-ZL202010667827.3</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">33</span>
+            <span class="patent-no">ZL202011508959.8</span>
+            <button class="copy-btn" onclick="copyPatentNo('202011508959.8', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利33-一种定值站手操器测试检测装置-发明专利-ZL202011508959.8</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">34</span>
+            <span class="patent-no">ZL202211218289.5</span>
+            <button class="copy-btn" onclick="copyPatentNo('202211218289.5', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利34-基于改进图像形成模型对水下图像进行恢复和增强的方法－ZL202211218289.5</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">35</span>
+            <span class="patent-no">ZL202010754228.5</span>
+            <button class="copy-btn" onclick="copyPatentNo('202010754228.5', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利35-一种带校验功能的板件智能测试系统-ZL202010754228.5</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">36</span>
+            <span class="patent-no">ZL2020110745358.2</span>
+            <button class="copy-btn" onclick="copyPatentNo('2020110745358.2', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利36-一种记忆板件智能测试系统及方法-ZL2020110745358.2</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">37</span>
+            <span class="patent-no">ZL202311324169.8</span>
+            <button class="copy-btn" onclick="copyPatentNo('202311324169.8', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利37-一种节能降耗的环冷机分布式智能协调控制方法-ZL202311324169.8</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">38</span>
+            <span class="patent-no">ZL202110838271.4</span>
+            <button class="copy-btn" onclick="copyPatentNo('202110838271.4', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利38-核电厂蒸发器水位控制系统及方法-ZL202110838271.4</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">39</span>
+            <span class="patent-no">ZL202110821881.3</span>
+            <button class="copy-btn" onclick="copyPatentNo('202110821881.3', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利39-文丘里管特性参数的预估方法、装置及计算机设备-ZL202110821881.3</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">40</span>
+            <span class="patent-no">ZL202210711686.X</span>
+            <button class="copy-btn" onclick="copyPatentNo('202210711686.X', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利40-一种接头电阻测量装置-ZL202210711686.X</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">41</span>
+            <span class="patent-no">ZL202211145018.1</span>
+            <button class="copy-btn" onclick="copyPatentNo('202211145018.1', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利41-主泵主轴转速传感器调校装置及调校方法-ZL202211145018.1</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">42</span>
+            <span class="patent-no">ZL202211151529.4</span>
+            <button class="copy-btn" onclick="copyPatentNo('202211151529.4', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利42-主泵转速传感器探针定位装置-ZL202211151529.4</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">43</span>
+            <span class="patent-no">ZL202210158937.6</span>
+            <button class="copy-btn" onclick="copyPatentNo('202210158937.6', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利43-反应堆冷却剂系统及其环路流量修正方法-ZL202210158937.6</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">44</span>
+            <span class="patent-no">ZL202210666704.7</span>
+            <button class="copy-btn" onclick="copyPatentNo('202210666704.7', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利44-一种多通道测试卡件和系统-ZL202210666704.7</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">45</span>
+            <span class="patent-no">ZL2024104032518</span>
+            <button class="copy-btn" onclick="copyPatentNo('2024104032518', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利45-蒸汽发生器的主给水调节阀控制方法、装置和设备-ZL2024104032518</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">46</span>
+            <span class="patent-no">ZL202410475709.0</span>
+            <button class="copy-btn" onclick="copyPatentNo('202410475709.0', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利46-双向电流源电路及核电机组的通道校验系统-ZL202410475709.0</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">47</span>
+            <span class="patent-no">ZL202410376040X</span>
+            <button class="copy-btn" onclick="copyPatentNo('202410376040X', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利47-核电机组设备老化更换策略确定方法、装置、设备和产品-ZL202410376040X</div>
+        </div>
+        
+        <div class="item">
+            <span class="seq">48</span>
+            <span class="patent-no">ZL202210666705.1</span>
+            <button class="copy-btn" onclick="copyPatentNo('202210666705.1', this)">📋 复制</button>
+            <a href="https://www.uyanip.com/" target="_blank" class="link-btn">🔍 查询</a>
+            <div class="title">授权专利-发明专利48-反应堆保护通道试验切换板件测试装置、系统和方法-ZL202210666705.1</div>
+        </div>
+        
+        </div>
+        <script>
+            function copyPatentNo(patentNo, button) {{
+                // 复制到剪贴板
+                navigator.clipboard.writeText(patentNo).then(function() {{
+                    // 修改按钮状态
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '✅ 已复制';
+                    button.classList.add('copied');
+                    
+                    // 2秒后恢复
+                    setTimeout(function() {{
+                        button.innerHTML = originalText;
+                        button.classList.remove('copied');
+                    }}, 2000);
+                }}).catch(function(err) {{
+                    alert('复制失败：' + err);
+                }});
+            }}
+        </script>
+    </body>
+    </html>
+    
